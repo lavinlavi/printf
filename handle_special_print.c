@@ -9,22 +9,9 @@
  * Return: the function returns the number of printed characters.
  */
 
-int handle_special_print(char *my_format, int *j, va_list my_list, char buffer[])
+int handle_special_print(const char *my_format, int *j, va_list my_list, char buffer[])
 {
-	int i;
-	int chars_printed = -1;
-	format_specs spec[] = {
-		{'c': print_my_char}, {'d': print_my_int}, {'i': print_signed_dec}, {'s':print_my_string}, {'\0': NULL}
-	};
-
-	for (i = 0; spec[i].my_spec != '\0'; i++)
-	{
-		if(spec[i].my_spec == my_format[j])
-		{
-			return (spec[i].my_func(my_list, buffer));
 	
-		}
-	}
 	return (chars_printed + 1);
 }
 
