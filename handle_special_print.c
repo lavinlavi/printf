@@ -25,17 +25,18 @@ int handle_spec_print(const char *my_fmt, int *ind, va_list the_args)
 	}
 	if (*ind == 's')
 	{
-		sp_chars_printed = print_my_str(va_list the_args);
+
+		sp_chars_printed = print_my_str(the_args);
 		return (sp_chars_printed);
 	}
 	if (*ind == 'd')
 	{
-		sp_chars_printed = print_my_int(va_list the_args);
+		sp_chars_printed = print_my_int(the_args);
 		return (sp_chars_printed);
 	}
 	if (*ind == 'i')
 	{
-		sp_chars_printed = print_my_dec(va_list the_args);
+		sp_chars_printed = print_my_dec(the_args);
 		return (sp_chars_printed);
 	}
 	

@@ -12,13 +12,13 @@ int _printf(const char *format, ...)
 {
 	int i, chars_printed = 0;
 	int spec_printed = 0;
-	va_list my_args;
+	va_list the_args;
 
 	if (!format)
 	{
 		return (-1);
 	}
-	va_start(my_args, format);
+	va_start(the_args, format);
 
 	for (i = 0; format && format[i] !='\0'; i++)
 	{
@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			spec_printed = handle_spec_print(format, &i, my_args);
+			spec_printed = handle_spec_print(format, &i, the_args);
 			chars_printed += spec_printed;
 		}
 	}
 	return (chars_printed);
-	va_end(my_args);
+	va_end(the_args);
 }

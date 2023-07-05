@@ -10,7 +10,7 @@ int print_my_int(va_list the_args);
  * Return: the function returns the length of the printed string.
  */
 
-int print_my_string(va_list the_args)
+int print_my_str(va_list the_args)
 {
 	char *s;
 	int i, size;
@@ -45,7 +45,7 @@ int print_my_string(va_list the_args)
 
 int print_my_int(va_list the_args)
 {
-	int n = va_arg(args, int);
+	int n = va_arg(the_args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
