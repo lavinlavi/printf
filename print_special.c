@@ -30,7 +30,7 @@ int print_special(const char *format, va_list the_args)
 	}
 	else
 	{
-		return (0);
+		return (-1);
 	}
 }
 
