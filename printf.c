@@ -30,10 +30,6 @@ int _printf(const char *format, ...)
 				chars_printed++;
 				i++;
 			}
-			if (format[i + 1] == '\0')
-			{
-				return (-1);
-			}
 			else
 			{
 				sp_chars_printed = print_special(&format[i], the_args);
