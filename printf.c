@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			{
 				sp_chars_printed = print_special(&format[i], the_args);
 				chars_printed += sp_chars_printed;
-			   	i++;
+				i++;
 			}
 		}
 
