@@ -14,7 +14,7 @@ int print_char(va_list the_args)
 
 	s = va_arg(the_args, char*);
 	
-	if(!s)
+	if(s == NULL)
 	{
 		return (-1);
 	}
@@ -36,7 +36,7 @@ int print_str(va_list the_args)
 
 	s = va_arg(the_args, char*);
 	len = 0;
-	if (!s)
+	if (s == NULL)
 	{
 		return(-1);
 	}
