@@ -14,11 +14,6 @@ int print_int(va_list the_args)
 	num = va_arg(the_args, int);
 	temp = num;
 	n = 1;
-	
-	if(!num)
-	{
-		return(-1);
-	}
 
 	if (num < 1)
 	{
