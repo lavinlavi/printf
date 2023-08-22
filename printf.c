@@ -33,8 +33,12 @@ int _printf(const char *format, ...)
 			else
 			{
 				sp_chars_printed = print_special(&format[i], the_args);
-			       chars_printed += sp_chars_printed;
-			       i++;
+				if (sp_chars_printed == -1)
+				{
+					return (-1);
+				}
+				chars_printed += sp_chars_printed;
+			   	i++;
 			}
 		}
 
@@ -44,5 +48,6 @@ int _printf(const char *format, ...)
 			chars_printed++;
 		}
 	}
+	va_end(the_args);
 	return (chars_printed);
 }
