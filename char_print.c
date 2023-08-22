@@ -12,8 +12,14 @@ int print_char(va_list the_args)
 {
 	char *s;
 
-	s = va_arg(the_args, char*);
-	
+	if(!va_arg(the_args, char*))
+	{
+		return (-1);
+	}
+	else
+	{
+		s = va_arg(the_args, char*);
+	}
 	if(s == NULL)
 	{
 		return (-1);
@@ -34,10 +40,23 @@ int print_str(va_list the_args)
 	char *s;
 	int len, i;
 
-	s = va_arg(the_args, char*);
+	if (!va_arg(the_args, char*))
+	{
+		return (-1);
+	}
+	else
+	{
+		s = va_arg(the_args, char*);
+	}
 	len = 0;
 	if (s == NULL)
 	{
+		*s = "null";
+
+		for (i = 0; s[i] != '\0'; i++)
+			{
+				write(1, &s[i], 1);
+			}
 		return(-1);
 	}
 	for (i = 0; s[i] != '\0'; i++)
