@@ -12,7 +12,6 @@ int print_char(va_list the_args)
 {
 	char *s;
 
-	
 	s = va_arg(the_args, char*);
 	if (s == NULL)
 	{
@@ -41,9 +40,9 @@ int print_str(va_list the_args)
 		s = "null";
 
 		for (i = 0; s[i] != '\0'; i++)
-			{
-				write(1, &s[i], 1);
-			}
+		{
+			write(1, &s[i], 1);
+		}
 		return (-1);
 	}
 	for (i = 0; s[i] != '\0'; i++)
