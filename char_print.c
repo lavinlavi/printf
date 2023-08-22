@@ -12,7 +12,7 @@ int print_char(va_list the_args)
 {
 	char *s;
 
-	if(!va_arg(the_args, char*))
+	if(va_arg(the_args, char* == NULL))
 	{
 		return (-1);
 	}
@@ -40,7 +40,7 @@ int print_str(va_list the_args)
 	char *s;
 	int len, i;
 
-	if (!va_arg(the_args, char*))
+	if (va_arg(the_args, char*) == NULL)
 	{
 		return (-1);
 	}
