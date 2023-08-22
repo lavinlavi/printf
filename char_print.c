@@ -12,11 +12,12 @@ int print_char(va_list the_args)
 {
 	char *s;
 
+	
+	s = va_arg(the_args, char*);
 	if (s == NULL)
 	{
 		return (-1);
 	}
-	s = va_arg(the_args, char*);
 	write(1, &s, 1);
 
 	return (1);
