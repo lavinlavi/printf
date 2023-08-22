@@ -33,10 +33,6 @@ int _printf(const char *format, ...)
 			else
 			{
 				sp_chars_printed = print_special(&format[i], the_args);
-				if (sp_chars_printed == -1)
-				{
-					return (-1);
-				}
 				chars_printed += sp_chars_printed;
 			   	i++;
 			}
