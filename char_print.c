@@ -12,7 +12,7 @@ int print_char(va_list the_args)
 {
 	char *s;
 
-	if(va_arg(the_args, char* == NULL))
+	if(va_arg(the_args, char*) == NULL)
 	{
 		return (-1);
 	}
