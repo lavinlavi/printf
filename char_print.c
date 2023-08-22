@@ -51,7 +51,7 @@ int print_str(va_list the_args)
 	len = 0;
 	if (s == NULL)
 	{
-		*s = "null";
+		s = "null";
 
 		for (i = 0; s[i] != '\0'; i++)
 			{
